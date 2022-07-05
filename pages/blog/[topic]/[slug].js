@@ -24,13 +24,13 @@ export default topicPage
 
 
 //get statc props
+// content: content.default,
+// const content = await import(`../../../content/blog/${topic}/${slug}.md`)
 export const getStaticProps = async ({ params }) => {
   const { topic, slug } = params
-  // const content = await import(`../../../content/blog/${topic}/${slug}.md`)
   const curPost = posts.find(post => post.slug === slug)
   return {
     props: {
-      // content: content.default,
       topic,
       slug,
       article: curPost
