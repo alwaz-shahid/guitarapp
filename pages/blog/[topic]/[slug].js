@@ -4,14 +4,13 @@ import posts from '../../../utils/data'
 const topicPage = ({ slug, topic, article }) => {
   return (
     <div>topicPage
-      // make blog layout with tailwind
       <div>
-<h1>
-  {article.title}
-</h1>
-<p>
-  {article.body}
-</p>
+        <h1>
+          {article.title}
+        </h1>
+        <p>
+          {article.body}
+        </p>
 
       </div>
 
