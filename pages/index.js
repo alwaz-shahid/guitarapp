@@ -30,6 +30,7 @@ export default function Home() {
       <main className="flex md:justify-between justify-center relative scroll-m-16 scroll-smooth items-center md:items-center md:flex-row flex-col min-w-full min-h-screen">
         <div className="md:w-1/3 w-1/2 md:p-3">
           <Image
+            alt="Guitar Acoustical"
             src={`/svgs/g (1).svg`}
             className="cursor-pointer anim7  hover:opacity-80 opacity-70 hover:rotate-90 min-h-full mi-w-full object-center"
             height={700}
@@ -110,6 +111,7 @@ const Pattern = () => (
   <>
     <div className="absolute top-2 md:top-5 left-4 md:left-2">
       <Image
+        alt="decor"
         src={`/svgs/g (4).svg`}
         className="cursor-pointer opacity-70 "
         width={100}
@@ -118,6 +120,7 @@ const Pattern = () => (
     </div>
     <div className="absolute bottom-4 md:bottom-10 left-2 md:left-2">
       <Image
+        alt="decor"
         src={`/svgs/g (6).svg`}
         className="cursor-pointer opacity-70 "
         width={100}
@@ -126,6 +129,7 @@ const Pattern = () => (
     </div>
     <div className="absolute top-2 md:top-7 right-2 md:right-6">
       <Image
+        alt="decor"
         src={`/svgs/g (7).svg`}
         className="cursor-pointer opacity-70 "
         width={100}
@@ -134,6 +138,7 @@ const Pattern = () => (
     </div>
     <div className="absolute top-2 md:top-7 left-42 md:left-14 ml-10">
       <Image
+        alt="decor"
         src={`/svgs/g (12).svg`}
         className="cursor-pointer opacity-70 "
         width={100}
@@ -142,6 +147,7 @@ const Pattern = () => (
     </div>
     <div className="absolute top-2 md:top-12 right-2 md:right-16">
       <Image
+        alt="decor"
         src={`/svgs/g (3).svg`}
         className="cursor-pointer opacity-70 "
         width={100}
@@ -150,6 +156,7 @@ const Pattern = () => (
     </div>
     <div className="absolute bottom-24 md:bottom-4 md:mr-7 right-48 md:right-14">
       <Image
+        alt="decor"
         src={`/svgs/g (13).svg`}
         className="cursor-pointer opacity-70 "
         width={100}
@@ -158,6 +165,7 @@ const Pattern = () => (
     </div>
     <div className="absolute bottom-4 md:bottom-6 right-2 md:right-8">
       <Image
+        alt="decor"
         src={`/svgs/g (10).svg`}
         className="cursor-pointer opacity-70 "
         width={100}
