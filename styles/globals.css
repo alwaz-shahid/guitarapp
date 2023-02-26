@@ -8,17 +8,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scrollbar-width: thin;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 * {
@@ -26,22 +46,22 @@ a {
 }
 
 
-.f-c-c{
+.f-c-c {
   @apply flex flex-col justify-center items-center;
 }
 
-.f-c-s{
+.f-c-s {
   @apply flex flex-col justify-center items-start;
 }
 
 /* .f-c-c{
  @apply flex flex-col justify-center items-center;
 } */
-.f-r-c{
+.f-r-c {
   @apply flex justify-center items-center;
 }
 
-.f-r-s{
+.f-r-s {
   @apply flex justify-start items-center;
 }
 
@@ -50,12 +70,19 @@ a {
   @apply flex justify-center items-center;
 }  */
 
-.ck{
+.ck {
   @apply border-2 border-red-800 bg-red-500 bg-opacity-50
 }
 
 
-.bgmain{
+.bgmain {
   @apply bg-green-400;
 }
 
+.bgprimary {
+  @apply bg-blue-400;
+}
+
+/* https://coolors.co/palette/ff9f1c-ffbf69-ffffff-cbf3f0-2ec4b6 */
+
+/* https://coolors.co/palette/ee6055-60d394-aaf683-ffd97d-ff9b85 */

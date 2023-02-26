@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [    "./pages/**/*.{js,ts,jsx,tsx}",
-  "./components/**/*.{js,ts,jsx,tsx}",],
+  content: ["./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
       fontFamily: {
@@ -9,6 +9,36 @@ module.exports = {
         "mono": 'Monoton',
         "bang": 'Bangers',
         "pac": 'Pacifico',
+      },
+      keyframes: {
+        wave: {
+          '0%': { transform: 'rotate(0.0deg)' },
+          '10%': { transform: 'rotate(14deg)' },
+          '20%': { transform: 'rotate(-8deg)' },
+          '30%': { transform: 'rotate(14deg)' },
+          '40%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(10.0deg)' },
+          '60%': { transform: 'rotate(0.0deg)' },
+          '100%': { transform: 'rotate(0.0deg)' },
+        },
+      },
+      colors: {
+        'primary': '#AAF683',
+        // 'secondary': '#f26419',
+        'secondary': '#AAF683',
+        'tertiary': '#FFD97D',
+        'quaternary': '#FF9B85',
+        'quinary': '#EE6055',
+        // 'primary': '#2EC4B6',
+        // 'secondary': '#CBF3F0',
+        // 'tertiary': '#FFBF69',
+        // 'quaternary': '#FF9F1C',
+        // 'quinary': '#FFFFFF',
+        // 'senary': '#FFFFFF',
+      },
+      animation: {
+        'waving': 'wave 2s linear infinite',
+        'giggle': 'wave 2s ease-in-out forwards',
       },
     },
   },
