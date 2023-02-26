@@ -7,7 +7,7 @@ import About from '../components/about/About'
 // import Banner from "../components/home/Banner";
 import NextSeo from 'next-seo'
 import nextSeoConfig from '../next-seo.config'
-import Test from '../components/Test'
+
 import { stringToArray } from '../utils/helpers'
 import ChordTransposer from '../components/guitar/ChordTransposer'
 import ChordDiagram from '../components/guitar/ChordDiagram'
