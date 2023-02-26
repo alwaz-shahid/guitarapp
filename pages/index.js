@@ -9,6 +9,7 @@ import NextSeo from 'next-seo'
 import nextSeoConfig from '../next-seo.config'
 import Test from '../components/Test'
 import { stringToArray } from '../utils/helpers'
+import ChordTransposer from '../components/guitar/ChordTransposer'
 
 export default function Home() {
   // const [data, setData] = useState();
@@ -21,28 +22,15 @@ export default function Home() {
     // alert(arrStr)
   }, [])
   return (
-    <div className="min-h-full min-w-full  ">
-      {/* {     <NextSeo
-        config={{
-          title: "Guitar Acoustical",
-          description: "Guitar Acoustical - Alwaz Shahid",
-        }}
-      /> */}
-
+    <div className="min-h-full min-w-full  relative">
+      <p className="absolute z-20 px-4 py-1 rounded-md shadow-lg top-4 left-4 bg-yellow-500 font-bold ">
+        Beta
+      </p>
       <main className="hero-container bg-primary txtMain">
-        {/* <div className="md:w-1/3 w-1/2 md:p-3">
-           <Image
-            alt="Guitar Acoustical"
-            src={`/svgs/g (1).svg`}
-            className="cursor-pointer hover:opacity-80 opacity-70 animate-giggle min-h-full mi-w-full object-center"
-            height={700}
-            width={700}
-          /> *
-        </div> */}
         <Pattern />
         <section className="md:h-72 h-56 w-full">
           <PageTitle />
-          <p className="min-w-full text-xl text-center">
+          <p className="min-w-full text-2xl font-pac text-center">
             {' '}
             Where Learning the Guitar Feels Like Music to Your Ears
           </p>
@@ -52,6 +40,12 @@ export default function Home() {
       <About />
 
       {/* <Button onClick={getData}>Get</Button> */}
+      <section
+        className="p-5 minhs
+      "
+      >
+        <ChordTransposer />
+      </section>
     </div>
   )
 }
@@ -77,24 +71,6 @@ const PageTitle = () => {
       opacity: 1,
     },
   }
-  const ta = [
-    'G',
-    'u',
-    'i',
-    't',
-    'a',
-    'r',
-    ' A',
-    'c',
-    'o',
-    'u',
-    's',
-    't',
-    'i',
-    'c',
-    'a',
-    'l',
-  ]
   return (
     <motion.h1
       variants={container}
@@ -112,16 +88,6 @@ const PageTitle = () => {
           {ch}
         </motion.span>
       ))}
-      {/* {ta.map((ch, i) => (
-        <motion.span
-          className="headingChar  text-green-800"
-          // className="headingChar  txtMainC"
-          key={i + ch}
-          variants={item}
-        >
-          {ch}
-        </motion.span>
-      ))} */}
     </motion.h1>
   )
 }
@@ -193,27 +159,3 @@ const Pattern = () => (
     </div>
   </>
 )
-
-// const tagline = "G u i t a r A c o u s t i c a l";
-// const arrStr = tagline.split(" ");
-
-{
-  /* <div className="bg-purple-500 p-20">
-{" "}
-<motion.ul
-  className="bg-purple-500 p-10"
-  variants={container}
-  initial="hidden"
-  animate="visible"
->
-  {[0, 1, 2, 3].map((index) => (
-    <motion.li
-      key={index}
-      className="w-10 h-10 bg-black m-2"
-      variants={item}
-    />
-  ))}
-</motion.ul>
-
-</div> */
-}
