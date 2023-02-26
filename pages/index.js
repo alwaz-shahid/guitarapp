@@ -54,9 +54,9 @@ export default function Home() {
         className="p-5 minhs
       "
       >
-        <ChordTransposer />
+        {/* <ChordTransposer /> */}
         <br />
-        <ChordDiagram chord={chordObject} />
+        {/* <ChordDiagram chord={chordObject} /> */}
       </section>
     </div>
   )

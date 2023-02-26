@@ -22,7 +22,7 @@ export const allChords = [
   { label: 'G Major', value: 'G', shape: ['3', '2', '0', '0', '0', '3'] },
   { label: 'G Minor', value: 'Gm', shape: ['3', '2', '0', '0', '0', '3'] },
 ]
-const majorChords = [
+export const majorChords = [
   {
     label: 'A',
     value: 'A',
@@ -88,7 +88,7 @@ const majorChords = [
   },
 ]
 
-const minorChords = [
+export const minorChords = [
   {
     label: 'A',
     value: 'A',
