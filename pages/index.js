@@ -10,6 +10,7 @@ import nextSeoConfig from '../next-seo.config'
 import Test from '../components/Test'
 import { stringToArray } from '../utils/helpers'
 import ChordTransposer from '../components/guitar/ChordTransposer'
+import ChordDiagram from '../components/guitar/ChordDiagram'
 
 export default function Home() {
   // const [data, setData] = useState();
@@ -21,6 +22,15 @@ export default function Home() {
   useEffect(() => {
     // alert(arrStr)
   }, [])
+  const chordObject = {
+    shapes: [
+      { fingerings: '320003' },
+      { fingerings: '3X0003' },
+      { fingerings: '355433' },
+      { fingerings: 'XX5787' },
+    ],
+  }
+
   return (
     <div className="min-h-full min-w-full  relative">
       <p className="absolute z-20 px-4 py-1 rounded-md shadow-lg top-4 left-4 bg-yellow-500 font-bold ">
@@ -45,6 +55,8 @@ export default function Home() {
       "
       >
         <ChordTransposer />
+        <br />
+        <ChordDiagram chord={chordObject} />
       </section>
     </div>
   )
