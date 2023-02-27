@@ -12,6 +12,7 @@ import { stringToArray } from '../utils/helpers'
 import ChordTransposer from '../components/guitar/ChordTransposer'
 
 import MyChord from '../components/guitar/MyChord'
+import Layout from '../components/Layout'
 
 export default function Home() {
   useEffect(() => {
@@ -19,7 +20,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-full min-w-full  relative">
+    <Layout>
       <p className="absolute z-20 px-4 py-1 rounded-md shadow-lg top-4 left-4 bg-yellow-500 font-bold ">
         Beta
       </p>
@@ -49,7 +50,7 @@ export default function Home() {
         <br />
         {/* <ChordDiagram chord={chordObject} /> */}
       </section>
-    </div>
+    </Layout>
   )
 }
 

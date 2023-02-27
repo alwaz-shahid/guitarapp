@@ -1,8 +1,11 @@
 import React from 'react'
+import MyChord from '../../components/guitar/MyChord'
+import ChordTransposer from '../../components/guitar/ChordTransposer'
+import Layout from '../../components/Layout'
 
 export default function chordsPage() {
   return (
-    <div className="w-full min-h-screen p-5">
+    <Layout>
       <section
         className="p-5 min-h-screen bg-green-300
       "
@@ -15,6 +18,6 @@ export default function chordsPage() {
         <br />
         {/* <ChordDiagram chord={chordObject} /> */}
       </section>
-    </div>
+    </Layout>
   )
 }

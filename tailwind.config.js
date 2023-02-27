@@ -1,14 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",],
+  content: [
+    './pages/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './components/**/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       fontFamily: {
-        "brush": 'Water Brush',
-        "mono": 'Monoton',
-        "bang": 'Bangers',
-        "pac": 'Pacifico',
+        brush: 'Water Brush',
+        mono: 'Monoton',
+        bang: 'Bangers',
+        pac: 'Pacifico',
       },
       keyframes: {
         wave: {
@@ -23,12 +28,12 @@ module.exports = {
         },
       },
       colors: {
-        'primary': '#AAF683',
+        primary: '#AAF683',
         // 'secondary': '#f26419',
-        'secondary': '#AAF683',
-        'tertiary': '#FFD97D',
-        'quaternary': '#FF9B85',
-        'quinary': '#EE6055',
+        secondary: '#AAF683',
+        tertiary: '#FFD97D',
+        quaternary: '#FF9B85',
+        quinary: '#EE6055',
         // 'primary': '#2EC4B6',
         // 'secondary': '#CBF3F0',
         // 'tertiary': '#FFBF69',
@@ -37,8 +42,8 @@ module.exports = {
         // 'senary': '#FFFFFF',
       },
       animation: {
-        'waving': 'wave 2s linear infinite',
-        'giggle': 'wave 2s ease-in-out forwards',
+        waving: 'wave 2s linear infinite',
+        giggle: 'wave 2s ease-in-out forwards',
       },
     },
   },
