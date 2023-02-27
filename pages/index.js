@@ -28,7 +28,7 @@ export default function Home() {
         <Pattern />
         <section className="md:h-72 h-56 w-full">
           <PageTitle />
-          <p className="min-w-full text-2xl font-pac text-center">
+          <p className="min-w-full text-sm md:text-2xl font-pac text-center">
             {' '}
             Where Learning the Guitar Feels Like Music to Your Ears
           </p>

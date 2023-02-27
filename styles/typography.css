@@ -16,7 +16,8 @@
 }
 
 .headingContainer {
-  @apply lg:text-8xl md:text-7xl sm:text-6xl text-5xl font-extrabold p-2 md:p-4 md:bg-none bg-green-400 rounded-sm md:bg-opacity-0 bg-opacity-30 font-brush text-gray-900 cursor-pointer mb-10 text-center md:text-left w-full;
+  @apply lg:text-8xl md:text-7xl text-6xl text-center font-extrabold p-2 md:p-4 rounded-sm 
+ font-brush text-gray-900 cursor-pointer mb-10 w-full;
 }
 
 .headingChar {
