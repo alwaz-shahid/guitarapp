@@ -1,6 +1,16 @@
 import Chord from '@tombatossals/react-chords/lib/Chord'
 
-const MyChord = ({ chord }) => {
+const MyChord = ({
+  chord = {
+    label: 'A Major',
+    value: 'A',
+    shapes: [
+      { fingerings: 'X02220', position: '1st Fret' },
+      { fingerings: '577655', position: '5th Fret' },
+      { fingerings: 'X02255', position: '5th Fret' },
+    ],
+  },
+}) => {
   const instrument = {
     strings: 6,
     fretsOnChord: 4,
@@ -12,29 +22,31 @@ const MyChord = ({ chord }) => {
   }
   const lite = false // defaults to false if omitted
   return (
-    <div>
-      <h2>{chord.label}</h2>
-      {chord.shapes.map((shape, index) => (
-        <div key={index}>
-          <h3>{shape.position}</h3>
-          <Chord
-            chord={{
-              frets: shape.fingerings
-                .split('')
-                .map((char) => (char === 'X' ? 0 : parseInt(char))),
-              fingers: shape.fingers
-                .split('')
-                .map((char) => (char === 'X' ? null : parseInt(char))),
-              barres: shape.barres
-                ? shape.barres.map((barre) => parseInt(barre))
-                : [],
-              capo: false,
-            }}
-            instrument={instrument}
-            lite={lite}
-          />
-        </div>
-      ))}
+    <div className="max-h-32 max-w-xs p-5">
+      <h2 className="text-3xl font-bold ">Chord {chord?.label}</h2>
+      <span className="inline-flex">
+        {chord.shapes.map((shape, index) => (
+          <div key={index} className="flex">
+            <h3>{shape.position}</h3>
+            <Chord
+              chord={{
+                frets: shape.fingerings
+                  .split('')
+                  .map((char) => (char === 'X' ? 0 : parseInt(char))),
+                fingers: shape.fingerings
+                  .split('')
+                  .map((char) => (char === 'X' ? null : parseInt(char))),
+                barres: shape.barres
+                  ? shape.barres.map((barre) => parseInt(barre))
+                  : [],
+                capo: false,
+              }}
+              instrument={instrument}
+              lite={lite}
+            />
+          </div>
+        ))}
+      </span>
     </div>
   )
 }
@@ -61,4 +73,4 @@ const MyChord = ({ chord }) => {
 //   return <Chord chord={chord} instrument={instrument} lite={lite} />
 // }
 
-// export default MyChord
+export default MyChord

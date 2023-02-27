@@ -10,48 +10,13 @@ import nextSeoConfig from '../next-seo.config'
 
 import { stringToArray } from '../utils/helpers'
 import ChordTransposer from '../components/guitar/ChordTransposer'
-import ChordDiagram from '../components/guitar/ChordDiagram'
+
 import MyChord from '../components/guitar/MyChord'
 
 export default function Home() {
-  const chordOptions = [
-    {
-      label: 'A',
-      value: 'A',
-      shapes: [
-        { fingerings: 'X02220', position: '1st Fret' },
-        { fingerings: '577655', position: '5th Fret' },
-        { fingerings: 'X02255', position: '5th Fret' },
-      ],
-    },
-    {
-      label: 'B',
-      value: 'B',
-      shapes: [
-        { fingerings: 'X24442', position: '2nd Fret' },
-        { fingerings: '799877', position: '7th Fret' },
-        { fingerings: 'X24455', position: '7th Fret' },
-      ],
-    },
-  ]
-
-  const selectedChord = chordOptions[0] // const [data, setData] = useState();
-  // const getData = async () => {
-  //   const response = await fetch("");
-  //   const data = await response.json();
-  //   console.log(data);
-  // };
   useEffect(() => {
     // alert(arrStr)
   }, [])
-  const chordObject = {
-    shapes: [
-      { fingerings: '320003' },
-      { fingerings: '3X0003' },
-      { fingerings: '355433' },
-      { fingerings: 'XX5787' },
-    ],
-  }
 
   return (
     <div className="min-h-full min-w-full  relative">
@@ -68,15 +33,19 @@ export default function Home() {
           </p>
         </section>
       </main>
-      <ChordDiagram shapes={selectedChord.shapes} />;
+      {/* <MyChord shapes={selectedChord.shapes} />; */}
+      {/* <ChordDiagram shapes={selectedChord.shapes} />; */}
       <About />
       {/* <Button onClick={getData}>Get</Button> */}
       <section
-        className="p-5 minhs
+        className="p-5 min-h-screen bg-green-300
       "
       >
+        <div className="flex flex-wrap justify-start items-start p-5">
+          {/* <MyChord /> */}
+        </div>
         {/* <ChordTransposer /> */}
-        <MyChord />
+        {/* <MyChord /> */}
         <br />
         {/* <ChordDiagram chord={chordObject} /> */}
       </section>
@@ -114,7 +83,9 @@ const PageTitle = () => {
     >
       {stringToArray('Guitar Acoustical').map((ch, i) => (
         <motion.span
-          className="headingChar  text-green-800"
+          className={`headingChar ${
+            i % 2 == 0 && ![10, 6, 4].includes(i) ? 'text-green-600' : ''
+          }`}
           // className="headingChar  txtMainC"
           key={i + ch}
           variants={item}

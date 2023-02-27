@@ -1,3 +1,4 @@
+import React from 'react'
 const chordOptions = [
   {
     label: 'A Major',
@@ -51,4 +52,8 @@ const chordsToTranspose = ['A', 'B']
 const stepsToTranspose = 2
 
 const transposedChords = transposeChords(chordsToTranspose, stepsToTranspose)
-console.log(transposedChords)
+// console.log(transposedChords)
+
+export default function ChordTransposer() {
+  return <div>{JSON.stringify(transposedChords)}</div>
+}
