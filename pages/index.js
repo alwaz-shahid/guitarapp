@@ -4,14 +4,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import About from '../components/about/About'
-// import Banner from "../components/home/Banner";
-import NextSeo from 'next-seo'
-import nextSeoConfig from '../next-seo.config'
 
 import { stringToArray } from '../utils/helpers'
-import ChordTransposer from '../components/guitar/ChordTransposer'
 
-import MyChord from '../components/guitar/MyChord'
 import Layout from '../components/Layout'
 
 export default function Home() {
@@ -21,34 +16,29 @@ export default function Home() {
 
   return (
     <Layout>
-      <p className="absolute z-20 px-4 py-1 rounded-md shadow-lg top-4 left-4 bg-yellow-500 font-bold ">
-        Beta
-      </p>
-      <main className="hero-container bg-primary txtMain">
+      <Head>
+        <title>Guitar Acoustical</title>
+      </Head>
+      <main className="hero-container bg-primary txtMain relative">
+        <p className="absolute z-10 px-4 py-1 rounded-md shadow-lg bottom-12 right-4 bg-yellow-500 font-bold ">
+          Beta
+        </p>
         <Pattern />
-        <section className="md:h-72 h-56 w-full">
-          <PageTitle />
-          <p className="min-w-full text-sm md:text-2xl font-pac text-center">
-            {' '}
-            Where Learning the Guitar Feels Like Music to Your Ears
-          </p>
+        <section className="md:h-56 h-16 w-full grid grid-cols-7">
+          <div className="md:col-span-4 col-span-7 col-start-1 md:col-start-4">
+            <PageTitle />
+            <p className="min-w-full text-sm md:text-2xl font-serif text-center">
+              {' '}
+              Where Learning the Guitar Feels Like Music to Your Ears!
+            </p>
+          </div>
         </section>
       </main>
-      {/* <MyChord shapes={selectedChord.shapes} />; */}
-      {/* <ChordDiagram shapes={selectedChord.shapes} />; */}
       <About />
-      {/* <Button onClick={getData}>Get</Button> */}
-      <section
-        className="p-5 min-h-screen bg-green-300
-      "
-      >
+      <section className="p-5 min-h-screen bg-green-300">
         <div className="flex flex-wrap justify-start items-start p-5">
           {/* <MyChord /> */}
         </div>
-        {/* <ChordTransposer /> */}
-        {/* <MyChord /> */}
-        <br />
-        {/* <ChordDiagram chord={chordObject} /> */}
       </section>
     </Layout>
   )
@@ -61,8 +51,10 @@ const PageTitle = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
+        delayChildren: 0.1,
+        staggerChildren: 0.05,
+        // delayChildren: 0.3,
+        // staggerChildren: 0.2,
       },
     },
   }
@@ -80,7 +72,7 @@ const PageTitle = () => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="headingContainer select-none text-center"
+      className="headingContainer select-none"
     >
       {stringToArray('Guitar Acoustical').map((ch, i) => (
         <motion.span
@@ -100,7 +92,7 @@ const PageTitle = () => {
 
 const Pattern = () => (
   <>
-    <div className="absolute top-2 md:top-5 left-4 md:left-2">
+    {/* <div className="absolute top-2 md:top-5 left-4 md:left-2">
       <Image
         alt="decor"
         src={`/svgs/g (4).svg`}
@@ -108,8 +100,17 @@ const Pattern = () => (
         width={100}
         height={100}
       />
+    </div> */}
+    <div className="absolute top-0 md:">
+      <Image
+        alt="decor"
+        src={`/svgs/g (6).svg`}
+        className="cursor-pointer opacity-70 border-4 select-none border-red-500"
+        width={600}
+        height={600}
+      />
     </div>
-    <div className="absolute bottom-4 md:bottom-4 left-2 md:left-2">
+    {/* <div className="absolute bottom-4 md:bottom-4 left-2 md:left-2">
       <Image
         alt="decor"
         src={`/svgs/g (6).svg`}
@@ -117,8 +118,8 @@ const Pattern = () => (
         width={100}
         height={100}
       />
-    </div>
-    <div className="absolute top-2 md:top-5 right-2 md:right-6">
+    </div> */}
+    {/* <div className="absolute top-2 md:top-5 right-2 md:right-6">
       <Image
         alt="decor"
         src={`/svgs/g (7).svg`}
@@ -126,8 +127,8 @@ const Pattern = () => (
         width={100}
         height={100}
       />
-    </div>
-    <div className="absolute top-2 md:top-5 left-42 md:left-14 ml-10">
+    </div> */}
+    {/* <div className="absolute top-2 md:top-5 left-42 md:left-14 ml-10">
       <Image
         alt="decor"
         src={`/svgs/g (12).svg`}
@@ -135,8 +136,8 @@ const Pattern = () => (
         width={100}
         height={100}
       />
-    </div>
-    <div className="absolute top-2 md:top-5 right-2 md:right-16">
+    </div> */}
+    {/* <div className="absolute top-2 md:top-5 right-2 md:right-16">
       <Image
         alt="decor"
         src={`/svgs/g (3).svg`}
@@ -144,8 +145,8 @@ const Pattern = () => (
         width={100}
         height={100}
       />
-    </div>
-    <div className="absolute bottom-4 md:bottom-4 md:mr-7 right-36 rotate-12 md:right-14">
+    </div> */}
+    {/* <div className="absolute bottom-4 md:bottom-4 md:mr-7 right-36 rotate-12 md:right-14">
       <Image
         alt="decor"
         src={`/svgs/g (13).svg`}
@@ -153,8 +154,8 @@ const Pattern = () => (
         width={100}
         height={100}
       />
-    </div>
-    <div className="absolute bottom-4 md:bottom-6 right-2 md:right-8">
+    </div> */}
+    {/* <div className="absolute bottom-4 md:bottom-6 right-2 md:right-8">
       <Image
         alt="decor"
         src={`/svgs/g (10).svg`}
@@ -162,6 +163,6 @@ const Pattern = () => (
         width={100}
         height={100}
       />
-    </div>
+    </div> */}
   </>
 )
