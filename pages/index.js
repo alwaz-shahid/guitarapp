@@ -11,9 +11,31 @@ import nextSeoConfig from '../next-seo.config'
 import { stringToArray } from '../utils/helpers'
 import ChordTransposer from '../components/guitar/ChordTransposer'
 import ChordDiagram from '../components/guitar/ChordDiagram'
+import MyChord from '../components/guitar/MyChord'
 
 export default function Home() {
-  // const [data, setData] = useState();
+  const chordOptions = [
+    {
+      label: 'A',
+      value: 'A',
+      shapes: [
+        { fingerings: 'X02220', position: '1st Fret' },
+        { fingerings: '577655', position: '5th Fret' },
+        { fingerings: 'X02255', position: '5th Fret' },
+      ],
+    },
+    {
+      label: 'B',
+      value: 'B',
+      shapes: [
+        { fingerings: 'X24442', position: '2nd Fret' },
+        { fingerings: '799877', position: '7th Fret' },
+        { fingerings: 'X24455', position: '7th Fret' },
+      ],
+    },
+  ]
+
+  const selectedChord = chordOptions[0] // const [data, setData] = useState();
   // const getData = async () => {
   //   const response = await fetch("");
   //   const data = await response.json();
@@ -46,15 +68,15 @@ export default function Home() {
           </p>
         </section>
       </main>
-
+      <ChordDiagram shapes={selectedChord.shapes} />;
       <About />
-
       {/* <Button onClick={getData}>Get</Button> */}
       <section
         className="p-5 minhs
       "
       >
-        <ChordTransposer />
+        {/* <ChordTransposer /> */}
+        <MyChord />
         <br />
         {/* <ChordDiagram chord={chordObject} /> */}
       </section>
