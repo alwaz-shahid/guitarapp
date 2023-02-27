@@ -97,6 +97,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/alwaz-shahid"
               className="text-gray-500 hover:text-gray-700"
               target="_blank"
+              rel="noreferrer"
             >
               Alwaz Shahid
             </a>
