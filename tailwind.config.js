@@ -28,12 +28,12 @@ module.exports = {
         },
       },
       colors: {
-        primary: '#AAF683',
-        // 'secondary': '#f26419',
-        secondary: '#AAF683',
-        tertiary: '#FFD97D',
-        quaternary: '#FF9B85',
-        quinary: '#EE6055',
+        primary: '#2B2D42',
+        secondary: '#8D99AE',
+        tertiary: '#EDF2F4',
+        // tertiary: '#FFD97D',
+        // quaternary: '#FF9B85',
+        // quinary: '#EE6055',
         // 'primary': '#2EC4B6',
         // 'secondary': '#CBF3F0',
         // 'tertiary': '#FFBF69',
@@ -48,4 +48,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
