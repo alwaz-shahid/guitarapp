@@ -10,12 +10,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        brush: 'Water Brush',
-        mono: 'Monoton',
-        bang: 'Bangers',
-        pac: 'Pacifico',
-      },
+      fontFamily: {},
       keyframes: {
         wave: {
           '0%': { transform: 'rotate(0.0deg)' },
