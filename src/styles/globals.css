@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Source+Serif+Pro:wght@300;400;600&display=swap');
+
+/* 
+
+padding: p-5
+
+
+*/
+
+/* Set up Tailwind configuration */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply custom base styles */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Set up global styles */
+html,
+body {
+  /* Reset default margin and padding */
+  margin: 0;
+  padding: 0;
+
+  /* Set font family and smoothing */
+  font-family: 'Source Serif Pro', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Enable smooth scrolling */
+  scroll-behavior: smooth;
+
+  /* Set scrollbar width */
+  scrollbar-width: thin;
+  background: white;
+  @apply text-primary;
+}
+
+/* Set up heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ck2 {
+  @apply border-2 border-violet-600;
+}
+
+.f-c-c {
+  @apply flex flex-col justify-center items-center;
+}
+
+.f-c-s {
+  @apply flex flex-col justify-center items-start;
+}
+
+.f-r-c {
+  @apply flex justify-center items-center;
+}
+
+.f-r-s {
+  @apply flex justify-start items-center;
+}
+
+.ck {
+  @apply border-2 border-red-800 bg-red-500 bg-opacity-50;
+}
+
+/* https://coolors.co/palette/ff9f1c-ffbf69-ffffff-cbf3f0-2ec4b6 */
+
+/* https://coolors.co/palette/ee6055-60d394-aaf683-ffd97d-ff9b85 */

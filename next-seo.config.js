@@ -1,13 +1,13 @@
 export default {
-    title: "Guitar Acoustical",
+    title: "Gitarr",
     description:
-      "Guitar Acoustical is for guitarists who want to learn more about the acoustics of the guitar. We will be providing you with the best resources to help you learn the acoustics of the guitar.",
+      "Gitarr is for guitarists who want to learn more about the acoustics of the guitar. We will be providing you with the best resources to help you learn the acoustics of the guitar.",
     canonical: "https://guitarapp.vercel.app/",
     noindex: false,
     openGraph: {
       url: "https://guitarapp.vercel.app/",
-      title: "Guitar Acoustical",
-      description: "Guitar Acoustical is for guitarists who want to learn more about the acoustics of the guitar. We will be providing you with the best resources to help you learn the acoustics of the guitar.",
+      title: "Gitarr",
+      description: "Gitarr is for guitarists who want to learn more about the acoustics of the guitar. We will be providing you with the best resources to help you learn the acoustics of the guitar.",
       images: [
         {
           url: "/static/instacover.jpg",
@@ -16,7 +16,7 @@ export default {
           alt: "acoustic guitar picture",
         }
       ],
-      site_name: "Guitar Acoustical"
+      site_name: "Gitarr"
     },
     instagram:{
         username: "alwazmusic",
