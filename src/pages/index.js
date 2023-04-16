@@ -1,14 +1,15 @@
+import Layout from 'components/Layout';
+import WelcomeScreen from 'components/screens/WelcomeScreen';
 import Head from 'next/head';
 import Image from 'next/image';
-
-import Layout from '../../components/Layout';
 
 export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Guitar Acoustical</title>
+        <title>Gitarr </title>
       </Head>
+      <WelcomeScreen />
     </Layout>
   );
 }
