@@ -1,83 +1,83 @@
 const transpose = {
   C: {
-    '1st': {
+    1: {
       chord: 'C#',
       shape: 'B',
       shapeAfterCapo: 'A#',
     },
-    '2nd': {
+    2: {
       chord: 'D',
       shape: 'C',
       shapeAfterCapo: 'B',
     },
-    '3rd': {
+    3: {
       chord: 'D#',
       shape: 'C#',
       shapeAfterCapo: 'C',
     },
-    '4th': {
+    4: {
       chord: 'E',
       shape: 'D',
       shapeAfterCapo: 'C#',
     },
-    '5th': {
+    5: {
       chord: 'F',
       shape: 'E',
       shapeAfterCapo: 'D',
     },
-    '6th': {
+    6: {
       chord: 'F#',
       shape: 'F',
       shapeAfterCapo: 'D#',
     },
-    '7th': {
+    7: {
       chord: 'G',
       shape: 'F#',
       shapeAfterCapo: 'E',
     },
-    '8th': {
+    8: {
       chord: 'G#',
       shape: 'G',
       shapeAfterCapo: 'F',
     },
   },
   D: {
-    '1st': {
+    1: {
       chord: 'D#',
       shape: 'C#',
       shapeAfterCapo: 'C',
     },
-    '2nd': {
+    2: {
       chord: 'E',
       shape: 'D',
       shapeAfterCapo: 'C#',
     },
-    '3rd': {
+    3: {
       chord: 'F',
       shape: 'E',
       shapeAfterCapo: 'D',
     },
-    '4th': {
+    4: {
       chord: 'F#',
       shape: 'F',
       shapeAfterCapo: 'D#',
     },
-    '5th': {
+    5: {
       chord: 'G',
       shape: 'F#',
       shapeAfterCapo: 'E',
     },
-    '6th': {
+    6: {
       chord: 'G#',
       shape: 'G',
       shapeAfterCapo: 'F',
     },
-    '7th': {
+    7: {
       chord: 'A',
       shape: 'G#',
       shapeAfterCapo: 'F#',
     },
-    '8th': {
+    8: {
       chord: 'A#',
       shape: 'A',
       shapeAfterCapo: 'G',
@@ -85,84 +85,84 @@ const transpose = {
   },
   // and so on for other chords...
   E: {
-    '1st': {
+    1: {
       chord: 'F#',
       shape: 'F',
       shapeAfterCapo: 'D#',
     },
-    '2nd': {
+    2: {
       chord: 'G',
       shape: 'F#',
       shapeAfterCapo: 'E',
     },
-    '3rd': {
+    3: {
       chord: 'G#',
       shape: 'G',
       shapeAfterCapo: 'F',
     },
-    '4th': {
+    4: {
       chord: 'A',
       shape: 'G#',
       shapeAfterCapo: 'F#',
     },
-    '5th': {
+    5: {
       chord: 'A#',
       shape: 'A',
       shapeAfterCapo: 'G',
     },
-    '6th': {
+    6: {
       chord: 'B',
       shape: 'A#',
       shapeAfterCapo: 'G#',
     },
-    '7th': {
+    7: {
       chord: 'C',
       shape: 'B',
       shapeAfterCapo: 'A',
     },
-    '8th': {
+    8: {
       chord: 'C#',
       shape: 'C',
       shapeAfterCapo: 'A#',
     },
   },
   F: {
-    '1st': {
+    1: {
       chord: 'F#',
       shape: 'F',
       shapeAfterCapo: 'D#',
     },
-    '2nd': {
+    2: {
       chord: 'G',
       shape: 'F#',
       shapeAfterCapo: 'E',
     },
-    '3rd': {
+    3: {
       chord: 'G#',
       shape: 'G',
       shapeAfterCapo: 'F',
     },
-    '4th': {
+    4: {
       chord: 'A',
       shape: 'G#',
       shapeAfterCapo: 'F#',
     },
-    '5th': {
+    5: {
       chord: 'A#',
       shape: 'A',
       shapeAfterCapo: 'G',
     },
-    '6th': {
+    6: {
       chord: 'B',
       shape: 'A#',
       shapeAfterCapo: 'G#',
     },
-    '7th': {
+    7: {
       chord: 'C',
       shape: 'B',
       shapeAfterCapo: 'A',
     },
-    '8th': {
+    8: {
       chord: 'C#',
       shape: 'C',
       shapeAfterCapo: 'A#',
@@ -170,42 +170,42 @@ const transpose = {
   },
 
   G: {
-    '1st': {
+    1: {
       chord: 'G#',
       shape: 'G',
       shapeAfterCapo: 'F',
     },
-    '2nd': {
+    2: {
       chord: 'A',
       shape: 'G#',
       shapeAfterCapo: 'F#',
     },
-    '3rd': {
+    3: {
       chord: 'A#',
       shape: 'A',
       shapeAfterCapo: 'G',
     },
-    '4th': {
+    4: {
       chord: 'B',
       shape: 'A#',
       shapeAfterCapo: 'G#',
     },
-    '5th': {
+    5: {
       chord: 'C',
       shape: 'B',
       shapeAfterCapo: 'A',
     },
-    '6th': {
+    6: {
       chord: 'C#',
       shape: 'C',
       shapeAfterCapo: 'A#',
     },
-    '7th': {
+    7: {
       chord: 'D',
       shape: 'C#',
       shapeAfterCapo: 'B',
     },
-    '8th': {
+    8: {
       chord: 'D#',
       shape: 'D',
       shapeAfterCapo: 'C',
@@ -213,12 +213,17 @@ const transpose = {
   },
 };
 
-const transposeChord = (chord = 'A', capoInitial = 0, capoFinal) => {
-  const capo = capoInitial == 0 ? '' : capoInitial;
-  const chordParts = chord.split(' ');
-  const root = chordParts[0];
-  const shape = chordParts[1];
-  const shapeAfterCapo = transpose[root][shape].shapeAfterCapo;
-  return `${shapeAfterCapo}${shape}`;
+const transposeChord = (
+  chord = 'A',
+  capoInitial = 0,
+  capoFinal = 1,
+  data = transpose
+) => {
+  if (capoInitial == 0) {
+    const oldChords = data[chord][capoInitial];
+    const newChords = data[chord][capoFinal];
+    console.log(newChords, oldChords);
+  }
 };
-console.log(transposeChord('C#1', 0, 2));
+
+transposeChord();
