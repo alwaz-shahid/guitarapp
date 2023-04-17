@@ -20,9 +20,9 @@ export default function WelcomeScreen() {
           Empowering Your Guitar Journey with Innovative Tools.
         </h2>
         <p className=' p-1  md:max-w-lg'>
-          We're excited to help you on your guitar journey. With our upcoming
-          tools, we're confident that we can take your playing to the next
-          level.{' '}
+          We&apos;re excited to help you on your guitar journey. With our
+          upcoming tools, we&apos;re confident that we can take your playing to
+          the next level.{' '}
         </p>
         <button className='px-4 py-2 mx-1 rounded-md bg-yellow-300 '>
           Call to action
