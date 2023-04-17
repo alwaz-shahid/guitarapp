@@ -1,6 +1,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 import animationData from 'lotties/guitar-exercise.json';
+import Features from 'components/molecules/Features';
 export default function WelcomeScreen() {
   const defaultOptions = {
     // loop: true,

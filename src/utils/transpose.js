@@ -1,4 +1,4 @@
-const transpose = {
+export const transpose = {
   C: {
     1: {
       chord: 'C#',
@@ -211,18 +211,130 @@ const transpose = {
       shapeAfterCapo: 'C',
     },
   },
+  A: {
+    1: {
+      chord: 'A#',
+      shape: 'G#',
+      shapeAfterCapo: 'F#',
+    },
+    2: {
+      chord: 'B',
+      shape: 'A#',
+      shapeAfterCapo: 'G#',
+    },
+    3: {
+      chord: 'C',
+      shape: 'B',
+      shapeAfterCapo: 'A',
+    },
+    4: {
+      chord: 'C#',
+      shape: 'C',
+      shapeAfterCapo: 'B',
+    },
+    5: {
+      chord: 'D',
+      shape: 'C#',
+      shapeAfterCapo: 'C',
+    },
+    6: {
+      chord: 'D#',
+      shape: 'D',
+      shapeAfterCapo: 'C#',
+    },
+    7: {
+      chord: 'E',
+      shape: 'D#',
+      shapeAfterCapo: 'C#',
+    },
+    8: {
+      chord: 'F',
+      shape: 'E',
+      shapeAfterCapo: 'D',
+    },
+  },
+  B: {
+    1: {
+      chord: 'C',
+      shape: 'B',
+      shapeAfterCapo: 'A',
+    },
+    2: {
+      chord: 'C#',
+      shape: 'C',
+      shapeAfterCapo: 'B',
+    },
+    3: {
+      chord: 'D',
+      shape: 'C#',
+      shapeAfterCapo: 'C',
+    },
+    4: {
+      chord: 'D#',
+      shape: 'D',
+      shapeAfterCapo: 'C#',
+    },
+    5: {
+      chord: 'E',
+      shape: 'D#',
+      shapeAfterCapo: 'C#',
+    },
+    6: {
+      chord: 'F',
+      shape: 'E',
+      shapeAfterCapo: 'D',
+    },
+    7: {
+      chord: 'F#',
+      shape: 'F',
+      shapeAfterCapo: 'D#',
+    },
+    8: {
+      chord: 'G',
+      shape: 'F#',
+      shapeAfterCapo: 'E',
+    },
+  },
 };
+// const transposeChord = (
+//   chord = 'A',
+//   capoInitial = 0,
+//   capoFinal = 1,
+//   data = transpose
+// ) => {
+//   if (capoInitial > 8 && capoInitial > 8) {
+//     console.log(error);
+//   }
+//   if (capoInitial == 0) {
+//     const oldChords = data[chord][capoInitial];
+//     const newChords = data[chord][capoFinal];
+//     return { newChords, oldChords };
+//   }
+//   if (capoInitial > 0 && capoInitial < 8) {
+//     const oldChords = data[chord][capoInitial];
+//     const newChords = data[chord][capoFinal];
+//     return { newChords, oldChords };
+//   }
+// };
 
-const transposeChord = (
+export const transposeChord = (
   chord = 'A',
   capoInitial = 0,
   capoFinal = 1,
   data = transpose
 ) => {
-  if (capoInitial == 0) {
+  if (capoInitial < 0 || capoFinal < 0 || capoInitial > 8 || capoFinal > 8) {
+    throw new Error('Invalid capo position!');
+  }
+  if (capoInitial === 0) {
     const oldChords = data[chord][capoInitial];
     const newChords = data[chord][capoFinal];
-    console.log(newChords, oldChords);
+    return { newChords, oldChords };
+  }
+  if (capoInitial > 0 && capoInitial < 8) {
+    const oldChords = data[chord][capoInitial];
+    const newChords = data[chord][capoFinal];
+    return { newChords, oldChords };
   }
 };
 

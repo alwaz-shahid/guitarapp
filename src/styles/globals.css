@@ -90,7 +90,12 @@ a {
 .ck {
   @apply border-2 border-red-800 bg-red-500 bg-opacity-50;
 }
-
+option {
+  background-color: white !important;
+}
+optgroup {
+  background-color: azure !important;
+}
 /* https://coolors.co/palette/ff9f1c-ffbf69-ffffff-cbf3f0-2ec4b6 */
 
 /* https://coolors.co/palette/ee6055-60d394-aaf683-ffd97d-ff9b85 */
