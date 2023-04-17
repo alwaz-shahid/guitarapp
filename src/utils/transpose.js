@@ -321,21 +321,43 @@ export const transposeChord = (
   chord = 'A',
   capoInitial = 0,
   capoFinal = 1,
-  data = transpose
+  data = {}
 ) => {
+  const chordData = data[chord];
   if (capoInitial < 0 || capoFinal < 0 || capoInitial > 8 || capoFinal > 8) {
     throw new Error('Invalid capo position!');
   }
   if (capoInitial === 0) {
-    const oldChords = data[chord][capoInitial];
-    const newChords = data[chord][capoFinal];
+    const oldChords = chord;
+    const newChords = chordData[capoFinal];
     return { newChords, oldChords };
   }
   if (capoInitial > 0 && capoInitial < 8) {
-    const oldChords = data[chord][capoInitial];
-    const newChords = data[chord][capoFinal];
+    const oldChords = chordData[capoInitial];
+    const newChords = chordData[capoFinal];
     return { newChords, oldChords };
   }
+  // console.log(chordData[1]);
 };
+// export const transposeChord = (
+//   chord = 'A',
+//   capoInitial = 0,
+//   capoFinal = 1,
+//   data = transpose
+// ) => {
+//   if (capoInitial < 0 || capoFinal < 0 || capoInitial > 8 || capoFinal > 8) {
+//     throw new Error('Invalid capo position!');
+//   }
+//   if (capoInitial === 0) {
+//     const oldChords = data[chord][capoInitial];
+//     const newChords = data[chord][capoFinal];
+//     return { newChords, oldChords };
+//   }
+//   if (capoInitial > 0 && capoInitial < 8) {
+//     const oldChords = data[chord][capoInitial];
+//     const newChords = data[chord][capoFinal];
+//     return { newChords, oldChords };
+//   }
+// };
 
-transposeChord();
+// transposeChord();

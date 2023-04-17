@@ -11,7 +11,7 @@ export default function Home() {
         <title>Gitarr </title>
       </Head>
       <WelcomeScreen />
-      <div className='min-h-[120px] w-full bg-primary flex justify-evenly' />
+      {/* <div className='min-h-[120px] w-full bg-primary flex justify-evenly' /> */}
       <UpcomingScreen />
     </Layout>
   );
