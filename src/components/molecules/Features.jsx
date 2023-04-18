@@ -39,14 +39,12 @@ export default function Features() {
     <Accordion>
       {features.map((feature, i) => (
         <AccordionItem key={i} pb={4}>
-          <h2>
-            <AccordionButton bg='ghostwhite'>
-              <Box as='span' flex='1' textAlign='left'>
-                {feature.title}
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
+          <AccordionButton bg='ghostwhite'>
+            {feature.title}
+
+            <AccordionIcon />
+          </AccordionButton>
+
           <AccordionPanel pb={4}>{feature.desc}</AccordionPanel>
         </AccordionItem>
       ))}

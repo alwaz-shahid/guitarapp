@@ -1,6 +1,8 @@
 import { Button, Select } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { transposeChord } from 'utils/transpose';
+import TransposeTable from './TransposeTable';
+import TransposeInstructions from './TransposeInstructions';
 
 const Transpose = () => {
   const [transposeData, setTransposeData] = useState(null);
@@ -41,7 +43,7 @@ const Transpose = () => {
 
   useEffect(() => {
     async function loadData() {
-      const res = await import('../../utils/transpose.json');
+      const res = await import('../../../utils/transpose.json');
       setTransposeData(res);
     }
     loadData();
@@ -78,14 +80,15 @@ const Transpose = () => {
 
   return (
     <div className='p-5'>
-      <div className='flex md:flex-row flex-col flex-auto gap-2'>
+      <TransposeInstructions />
+      <div className='flex lg:flex-row flex-col flex-auto gap-2'>
         <div className='flex-1'>
-          <label className='textsm md:text-base '>Select Chords</label>
+          <label className='text-sm lg:text-base '>Select Chord</label>
           {transposeData && (
             <Select
               variant='filled'
               // bg='ghostwhite'
-              bg='navajowhite'
+              bg='purple.100'
               color='brand.900'
               name='chord'
               value={data?.chord}
@@ -100,9 +103,9 @@ const Transpose = () => {
           )}
         </div>
         <div className='flex-1'>
-          <label className='textsm md:text-base '>Select Initial Fret</label>
+          <label className='textsm lg:text-base '>Select Initial Fret</label>
           <Select
-            bg='navajowhite'
+            bg='purple.100'
             name='capoInitial'
             value={data?.capoInitial}
             onChange={handleChange}
@@ -115,9 +118,11 @@ const Transpose = () => {
           </Select>
         </div>
         <div className='flex-1'>
-          <label className='textsm md:text-base '>Select Final Fret</label>
+          <label className='textsm lg:text-base '>Select Final Fret</label>
           <Select
-            bg='navajowhite'
+            // variant='outline'
+            bg='purple.100'
+            // bgGradient='linear(red.100 0%, orange.100 25%, yellow.100 50%)'
             name='capoFinal'
             value={data?.capoFinal}
             onChange={handleChange}
@@ -147,6 +152,7 @@ const Transpose = () => {
         <p>capoInitial:{fretLabel[data?.capoInitial]}</p>
         <p>capoFinal:{fretLabel[data?.capoFinal]}</p>
       </div>
+      <TransposeTable />
     </div>
   );
 };

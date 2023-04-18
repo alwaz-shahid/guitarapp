@@ -6,7 +6,7 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import Features from 'components/molecules/Features';
-import Transpose from 'components/organisims/Transpose';
+import Transpose from 'components/organisims/transpose/Transpose';
 export default function UpcomingScreen() {
   return (
     <section className='p-5 min-h-[50vh]'>
@@ -14,7 +14,7 @@ export default function UpcomingScreen() {
         <Skeleton height='20px' />
         <Skeleton height='20px' />
       </Stack>
-      <h2 className='text-center text-primary font-extrabold italic text-5xl'>
+      <h2 className='text-center text-primary font-extrabold italic text-5xl py-5'>
         UPCOMING
       </h2>
       <Features />
