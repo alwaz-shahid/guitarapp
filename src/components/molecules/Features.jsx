@@ -36,7 +36,7 @@ const features = [
 
 export default function Features() {
   return (
-    <Accordion>
+    <Accordion p={5}>
       {features.map((feature, i) => (
         <AccordionItem key={i} pb={4}>
           <AccordionButton bg='ghostwhite'>

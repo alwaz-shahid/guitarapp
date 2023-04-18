@@ -11,6 +11,7 @@ import {
   TableContainer,
 } from '@chakra-ui/react';
 export default function TransposeTable({ data }) {
+  
   return (
     <TableContainer>
       <Table variant='simple'>

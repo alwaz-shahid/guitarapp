@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className='sticky top-0 z-50  p-1 shadow-2xl bgg'>
       <nav className='px-4 flex justify-between'>
-        <h1 className='font-extrabold italic animate-pulse tracking-widest'>
+        <h1 className='font-extrabold italic animate-pulse tracking-wider lg:tracking-widest'>
           Gitarr{' '}
         </h1>{' '}
         <h6 className='font-extrabold italic text-red-400 tracking-widest'>

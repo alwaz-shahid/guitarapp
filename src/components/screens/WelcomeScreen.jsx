@@ -34,16 +34,18 @@ export default function WelcomeScreen() {
           the next level.{' '}
         </p>
         <Box
-          as='button'
+          href='#tools'
+          as='a'
           p={4}
           color='white'
           fontWeight='bold'
           borderRadius='md'
-          bgGradient='linear(to-r, purple.400, pink.400)'
-          _hover={{
-            bgGradient: 'linear(to-r, red.500, yellow.500)',
-          }}>
-          Click here
+          bgGradient='linear(to-r, purple.400, pink.300)'
+          // _hover={{
+          //   bgGradient: 'linear(to-r, red.500, yellow.500)',
+          // }}
+        >
+          Try out Transpose Tool
         </Box>
       </div>
       <div className='lg:p-2 '>

@@ -1,6 +1,7 @@
 import Layout from 'components/Layout';
 import UpcomingScreen from 'components/screens/UpcomingScreen';
 import WelcomeScreen from 'components/screens/WelcomeScreen';
+import DemoScreen from 'components/screens/apps/DemoScreen';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <WelcomeScreen />
       {/* <div className='min-h-[120px] w-full bg-primary flex justify-evenly' /> */}
       <UpcomingScreen />
+      <DemoScreen />
     </Layout>
   );
 }

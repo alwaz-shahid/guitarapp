@@ -81,7 +81,7 @@ const Transpose = () => {
   return (
     <div className='p-5'>
       <TransposeInstructions />
-      <div className='flex lg:flex-row flex-col flex-auto gap-2'>
+      <div className='flex lg:flex-row flex-col flex-auto gap-2 py-2 border-b-2 border-purple-400 rounded-mg shadow-lg my-5'>
         <div className='flex-1'>
           <label className='text-sm lg:text-base '>Select Chord</label>
           {transposeData && (
