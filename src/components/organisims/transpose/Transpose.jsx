@@ -11,6 +11,7 @@ const Transpose = () => {
     capoInitial: 0,
     capoFinal: 1,
   });
+  const [isDev, setIsDev] = useState(true);
 
   //   const [chord, setChord] = useState('C');
   //   const [capoInitial, setCapoInitial] = useState(0);
@@ -79,7 +80,7 @@ const Transpose = () => {
   ];
 
   return (
-    <div className='p-5'>
+    <div className='p-5 w-11/12 lg:w-3/4 mx-auto border-2 rounded-lg shadow-2xl my-10'>
       <TransposeInstructions />
       <div className='flex lg:flex-row flex-col flex-auto gap-2 py-2 border-b-2 border-purple-400 rounded-mg shadow-lg my-5'>
         <div className='flex-1'>
@@ -136,9 +137,9 @@ const Transpose = () => {
         </div>
       </div>
       <Button
-        variant={'outline'}
-        bg={'red.300'}
-        m={5}
+        bgGradient='linear(to-l, #7928CA, #FF0080)'
+        bgClip='text'
+        m={2}
         onClick={handleTtransposedChord}
         color={'blackAlpha.600'}>
         Get Transposed Chords
@@ -146,13 +147,24 @@ const Transpose = () => {
       {/* {transposedChord && (
         <p>Transposed chord: {JSON.stringify(transposedChord)}</p>
       )} */}
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-      <div>
-        <p>Selected Chord: {data?.chord}</p>
-        <p>capoInitial:{fretLabel[data?.capoInitial]}</p>
-        <p>capoFinal:{fretLabel[data?.capoFinal]}</p>
-      </div>
-      <TransposeTable />
+
+      <TransposeTable data={data} />
+      <p
+        className='border rounded-md m-5 px-2 py-1'
+        onClick={() => setIsDev(!isDev)}>
+        Dev?
+      </p>
+      {isDev && (
+        <>
+          <p>Dev env only</p>
+          <div>
+            <p>Selected Chord: {data?.chord}</p>
+            <p>capoInitial:{fretLabel[data?.capoInitial]}</p>
+            <p>capoFinal:{fretLabel[data?.capoFinal]}</p>
+          </div>
+          <pre>{JSON.stringify(data, null, 2)}</pre>
+        </>
+      )}
     </div>
   );
 };
